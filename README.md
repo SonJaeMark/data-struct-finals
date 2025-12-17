@@ -56,6 +56,65 @@ Each data structure is implemented with its own header (.h) and implementation (
 - Linux/Unix environment (developed in Dev Container)
 - Make build system
 
+## Setup Instructions
+
+### For Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install g++ make
+```
+
+### For macOS
+```bash
+# Install Homebrew if not already installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install g++ and make
+brew install gcc make
+```
+
+### For Windows
+#### Option 1: Windows Subsystem for Linux (WSL)
+1. Enable WSL in Windows Features
+2. Install Ubuntu from Microsoft Store
+3. Open Ubuntu terminal and run:
+```bash
+sudo apt update
+sudo apt install g++ make
+```
+
+#### Option 2: MinGW
+1. Download and install MinGW from https://www.mingw-w64.org/
+2. Add MinGW/bin to your PATH
+3. Install make separately or use the included version
+
+### For VS Code Users (Recommended)
+This project is developed using VS Code with Dev Containers for a consistent development environment. Dev Containers use Docker to provide isolated, reproducible development environments.
+
+#### Prerequisites:
+1. Install Docker Desktop for your platform:
+   - **Windows/macOS**: Download from https://www.docker.com/products/docker-desktop
+   - **Linux**: 
+     ```bash
+     sudo apt update
+     sudo apt install docker.io
+     sudo systemctl start docker
+     sudo systemctl enable docker
+     sudo usermod -aG docker $USER
+     ```
+     (Log out and back in for group changes to take effect)
+
+2. Install VS Code
+3. Install the "Dev Containers" extension from the VS Code marketplace
+
+#### Setup:
+1. Clone the repository
+2. Open the project in VS Code
+3. When prompted, click "Reopen in Container" (or use Command Palette: "Dev Containers: Reopen in Container")
+4. The container includes all necessary dependencies (g++, make, etc.) pre-installed
+
+Dev Containers ensure everyone gets the same development environment, eliminating "works on my machine" issues.
+
 ## Building the Project
 
 1. Ensure you have g++ installed:
