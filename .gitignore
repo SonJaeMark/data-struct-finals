@@ -1,0 +1,10 @@
+# binaries
+a.out
+app
+*.exe
+
+# build folder
+build/
+
+# vscode
+.vscode/
